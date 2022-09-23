@@ -16,6 +16,12 @@ let nodeList = [
                 key: "Mainnet_mew",
                 endpoint: "https://api.myetherapi.com/eth",
                 id: "1",
+            },
+            {
+                name: "EthPow",
+                key: "eth_pow",
+                endpoint: "https://mainnet.ethereumpow.org",
+                id: "10001",
             }
         ]
     },
