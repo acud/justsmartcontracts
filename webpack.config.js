@@ -7,6 +7,9 @@ const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './ant-over
 
 module.exports = {
     resolve: {
+        alias: {
+            process: "process",
+        },
         fallback: {
             assert: require.resolve('assert'),
             buffer: require.resolve('buffer'),
@@ -20,7 +23,7 @@ module.exports = {
             os: require.resolve('os-browserify/browser'),
             path: require.resolve('path-browserify'),
             punycode: require.resolve('punycode'),
-            process: require.resolve('process/browser'),
+            process: require.resolve('process'),
             querystring: require.resolve('querystring-es3'),
             stream: require.resolve('stream-browserify'),
             string_decoder: require.resolve('string_decoder'),
@@ -42,7 +45,7 @@ module.exports = {
             Buffer: ['buffer', 'Buffer'],
         }),
         new webpack.ProvidePlugin({
-            process: 'process/browser',
+            process: 'process',
         }),
     ],
 
